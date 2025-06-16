@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory Management</h1>
+    <div class="menu">
+      <button onclick="showSection('add')">Add Item</button>
+      <button onclick="showSection('search')">Search Item</button>
+      <button onclick="showSection('sell')">Sell Item</button>
+      <button onclick="showAllItems()">Show All Items</button>
+      <button onclick="saveAllItemsToFile()">Save All to File</button>
+    </div>
+
+    <div class="section" id="add">
+      <h2>Add Item</h2>
+      <input type="text" id="addName" placeholder="Name" />
+      <input type="number" id="addPrice" placeholder="Price" />
+      <input type="number" id="addQuantity" placeholder="Quantity" />
+      <button onclick="addItem()">Add</button>
+    </div>
+
+    <div class="section" id="search">
+      <h2>Search Item</h2>
+      <input type="text" id="searchName" placeholder="Item name" />
+      <button onclick="searchItem()">Search</button>
+      <div id="searchResult"></div>
+    </div>
+
+    <div class="section" id="sell">
+      <h2>Sell Item</h2>
+      <input type="text" id="sellName" placeholder="Item name" />
+      <input type="number" id="sellQuantity" placeholder="Quantity to sell" />
+      <button onclick="sellItem()">Sell</button>
+    </div>
+
+    <div class="section" id="display">
+      <h2>All Items</h2>
+      <div id="allItems"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
